@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4f9b327f-f895-48aa-961f-e03770684fe4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://starapp.richva.ci.richmond.va.us/Services/CORApplicationLogging/LogErrorService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LogErrorService.xsd" MetadataType="Schema" ID="cba93653-3524-437d-a042-6769f591f598" SourceId="1" SourceUrl="http://starapp.richva.ci.richmond.va.us/SERVICES/CORAPPLICATIONLOGGING/LogErrorService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LogErrorService.wsdl" MetadataType="Wsdl" ID="e1d3dc94-a030-4406-a6ff-0e3f265af613" SourceId="1" SourceUrl="http://starapp.richva.ci.richmond.va.us/SERVICES/CORAPPLICATIONLOGGING/LogErrorService.svc?wsdl" />
+    <MetadataFile FileName="LogErrorService1.xsd" MetadataType="Schema" ID="44a4e662-250c-45d4-bafb-4eb993cb2d0b" SourceId="1" SourceUrl="http://starapp.richva.ci.richmond.va.us/SERVICES/CORAPPLICATIONLOGGING/LogErrorService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LogErrorService2.xsd" MetadataType="Schema" ID="7a75e585-50f9-4519-83b5-7284cd541941" SourceId="1" SourceUrl="http://starapp.richva.ci.richmond.va.us/SERVICES/CORAPPLICATIONLOGGING/LogErrorService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LogErrorService.disco" MetadataType="Disco" ID="c9f3b2e7-afc6-4549-8ab6-28e6d1c057c2" SourceId="1" SourceUrl="http://starapp.richva.ci.richmond.va.us/SERVICES/CORAPPLICATIONLOGGING/LogErrorService.svc?disco" />
+    <MetadataFile FileName="LogErrorService1.wsdl" MetadataType="Wsdl" ID="d4b66a5a-afe8-458b-8890-22d5f42e2e24" SourceId="1" SourceUrl="http://starapp.richva.ci.richmond.va.us/SERVICES/CORAPPLICATIONLOGGING/LogErrorService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="LogErrorService2.wsdl" MetadataType="Wsdl" ID="f4d16b2d-b7d0-4813-964d-ac198bf7fdfe" SourceId="1" SourceUrl="http://starapp.richva.ci.richmond.va.us/SERVICES/CORAPPLICATIONLOGGING/LogErrorService.svc?wsdl=wsdl1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/11/Contracts" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/11/Contracts" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/11/Contracts/Imports">
+      <xsd:import schemaLocation="http://starapp.richva.ci.richmond.va.us/SERVICES/CORAPPLICATIONLOGGING/LogErrorService.svc?xsd=xsd0" namespace="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Contracts" />
+      <xsd:import schemaLocation="http://starapp.richva.ci.richmond.va.us/SERVICES/CORAPPLICATIONLOGGING/LogErrorService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://starapp.richva.ci.richmond.va.us/SERVICES/CORAPPLICATIONLOGGING/LogErrorService.svc?xsd=xsd2" namespace="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/11/Contracts" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILogError_LogError_InputMessage">
+    <wsdl:part xmlns:q1="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Contracts" name="parameters" element="q1:LogError" />
+  </wsdl:message>
+  <wsdl:message name="ILogError_LogError_OutputMessage">
+    <wsdl:part xmlns:q2="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Contracts" name="parameters" element="q2:LogErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogError_LogSimpleError_InputMessage">
+    <wsdl:part xmlns:q3="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Contracts" name="parameters" element="q3:LogSimpleError" />
+  </wsdl:message>
+  <wsdl:message name="ILogError_LogSimpleError_OutputMessage">
+    <wsdl:part xmlns:q4="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Contracts" name="parameters" element="q4:LogSimpleErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogError_LogErrorWithReturn_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogErrorWithReturn" />
+  </wsdl:message>
+  <wsdl:message name="ILogError_LogErrorWithReturn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogErrorWithReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILogError_LogSimpleErrorWithReturn_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogSimpleErrorWithReturn" />
+  </wsdl:message>
+  <wsdl:message name="ILogError_LogSimpleErrorWithReturn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogSimpleErrorWithReturnResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILogError">
+    <wsdl:operation name="LogError">
+      <wsdl:input wsaw:Action="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Contracts/ILogError/LogError" message="tns:ILogError_LogError_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Contracts/ILogError/LogErrorResponse" message="tns:ILogError_LogError_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogSimpleError">
+      <wsdl:input wsaw:Action="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Contracts/ILogError/LogSimpleError" message="tns:ILogError_LogSimpleError_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Contracts/ILogError/LogSimpleErrorResponse" message="tns:ILogError_LogSimpleError_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogErrorWithReturn">
+      <wsdl:input wsaw:Action="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/11/Contracts/ILogError/LogErrorWithReturn" message="tns:ILogError_LogErrorWithReturn_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/11/Contracts/ILogError/LogErrorWithReturnResponse" message="tns:ILogError_LogErrorWithReturn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogSimpleErrorWithReturn">
+      <wsdl:input wsaw:Action="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/11/Contracts/ILogError/LogSimpleErrorWithReturn" message="tns:ILogError_LogSimpleErrorWithReturn_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/11/Contracts/ILogError/LogSimpleErrorWithReturnResponse" message="tns:ILogError_LogSimpleErrorWithReturn_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

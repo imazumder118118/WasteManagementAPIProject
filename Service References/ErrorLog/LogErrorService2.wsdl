@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Binding" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/11/Contracts" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Binding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/11/Contracts" location="http://starapp.richva.ci.richmond.va.us/SERVICES/CORAPPLICATIONLOGGING/LogErrorService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="LogErrorServiceViaBasicHttp" type="i0:ILogError">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LogError">
+      <soap:operation soapAction="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Contracts/ILogError/LogError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogSimpleError">
+      <soap:operation soapAction="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Contracts/ILogError/LogSimpleError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogErrorWithReturn">
+      <soap:operation soapAction="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/11/Contracts/ILogError/LogErrorWithReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogSimpleErrorWithReturn">
+      <soap:operation soapAction="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/11/Contracts/ILogError/LogSimpleErrorWithReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

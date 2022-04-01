@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Contracts" elementFormDefault="qualified" targetNamespace="http://www.ci.richmond.va.us/CORServices/CORApplicationLogging/ErrorLog/2008/10/Contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="LogError">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="errorLog" nillable="true" type="tns:ErrorLog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ErrorLog">
+    <xs:sequence>
+      <xs:element name="ApplicationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicationNamespace" nillable="true" type="xs:string" />
+      <xs:element name="HostServer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClassName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MethodName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Severity" type="xs:int" />
+      <xs:element name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Trace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OtherData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorLog" nillable="true" type="tns:ErrorLog" />
+  <xs:element name="LogErrorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LogErrorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogSimpleError">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="applicationName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hostServer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="errorDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogSimpleErrorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LogSimpleErrorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
